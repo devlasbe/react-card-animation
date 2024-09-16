@@ -1,33 +1,16 @@
 import React from 'react';
-import { ScrollAnimation } from './lib';
-
-const style = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  flex: 1,
-  height: '100vh',
-  fontSize: '50px',
-};
-
+import { CardAnimation } from './lib';
 function App() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '200vh' }}>
-      <div style={style}>
-        <ScrollAnimation startingPoint="left" amount={'xl'}>
-          <div onClick={() => console.log('hi')}>abc</div>
-        </ScrollAnimation>
-        <ScrollAnimation startingPoint="right" amount={'xl'} duration={0.5} repeat={true} delay={1}>
-          <div>abc</div>
-        </ScrollAnimation>
-      </div>
-      <div style={style}>
-        <ScrollAnimation startingPoint="top" amount={'md'} repeat={true}>
-          <div>abc</div>
-        </ScrollAnimation>
-        <ScrollAnimation startingPoint="bottom" amount={'md'}>
-          <div>abc</div>
-        </ScrollAnimation>
+    <div style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '90vh' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center', alignItems: 'center', gap: '32px' }}>
+        <CardAnimation angle={30}>
+          <div style={{ width: '300px', height: '200px', borderRadius: '8px', background: '#df3f00' }}></div>
+        </CardAnimation>
+
+        <CardAnimation>
+          <div style={{ width: '300px', height: '300px', borderRadius: '8px', background: '#0054b5' }}></div>
+        </CardAnimation>
       </div>
     </div>
   );

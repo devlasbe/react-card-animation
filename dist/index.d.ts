@@ -1,1 +1,1 @@
-export * from './react-scroll-animation';
+export { CardAnimation } from './react-card-animation';

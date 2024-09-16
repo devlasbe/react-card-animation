@@ -5,3 +5,4 @@
 /.gitignore
 /.vite
 tsconfig.json
+pnpm-lock.yaml
