@@ -8,7 +8,7 @@
 
 ![react_card_animation](https://github.com/user-attachments/assets/5d3cdae5-d7d8-4853-9d61-434cf70cfa4d)
 
-손쉽게 카드 뷰 컨테이너에 3D 인터렉션 애니메이션을 적용할 수 있는 리액트 패키지입니다.
+손쉽게 카드 뷰 컨테이너에 3D 인터랙션 애니메이션을 적용할 수 있는 리액트 패키지입니다.
 
 ### install
 
