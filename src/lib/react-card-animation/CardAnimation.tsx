@@ -6,6 +6,7 @@ import './react-card-animation.css';
 type CardAnimationType = {
   children: React.ReactElement;
   angle?: number;
+  mouseOutDelay?: number;
 };
 
 type MousePositionType = {
@@ -13,7 +14,7 @@ type MousePositionType = {
   y: null | number;
 };
 
-export const CardAnimation = ({ children, angle = 30 }: CardAnimationType) => {
+export const CardAnimation = ({ children, angle = 30, mouseOutDelay = 500 }: CardAnimationType) => {
   const [mousePosition, setMousePosition] = useState<MousePositionType>({
     x: null,
     y: null,
@@ -49,10 +50,14 @@ export const CardAnimation = ({ children, angle = 30 }: CardAnimationType) => {
   );
 
   const handleMouseOut = useCallback(() => {
-    setTimeout(() => {
+    if (mouseOutDelay) {
+      setTimeout(() => {
+        setIsInMouse(false);
+      }, mouseOutDelay);
+    } else {
       setIsInMouse(false);
-    }, 500);
-  }, []);
+    }
+  }, [mouseOutDelay]);
 
   const loop = useCallback(() => {
     setMousePosition(mousePositionRef.current);

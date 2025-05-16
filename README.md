@@ -27,7 +27,7 @@ export default function App() {
       <CardAnimation>
         <div className={`w-[300px] h-[200px]`}>...</div>
       </CardAnimation>
-      <CardAnimation angle={10}>
+      <CardAnimation angle={10} mouseOutDelay={0}>
         <div className={`w-[300px] h-[200px]`}>...</div>
       </CardAnimation>
     </div>
@@ -39,7 +39,8 @@ export default function App() {
 
 ### Props
 
-| **Name** | **Value**            | **Default Value** | **description**                              |
-| -------- | -------------------- | ----------------- | -------------------------------------------- |
-| children | `React.ReactElement` | -                 | 애니메이션을 적용할 자식 컴포넌트            |
-| angle    | `number`             | 30                | 애니메이션 회전 각도, 클 수록 더 많이 회전함 |
+| **Name**      | **Value**            | **Default Value** | **description**                                         |
+| ------------- | -------------------- | ----------------- | ------------------------------------------------------- |
+| children      | `React.ReactElement` | -                 | 애니메이션을 적용할 자식 컴포넌트                       |
+| angle         | `number`             | 30                | 애니메이션 회전 각도, 클 수록 더 많이 회전함            |
+| mouseOutDelay | `number`             | 500               | 마우스를 벗어날 때 원상복구 되기까지의 딜레이 시간 (ms) |
